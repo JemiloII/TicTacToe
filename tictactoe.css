@@ -1,0 +1,31 @@
+.game_board{
+	background: url('TicTackBack_400x400.png') no-repeat center;
+	height: 441px;
+	width: 447px;
+	display: table;
+}
+.game_zone{
+	height: 145.67px;
+	width: 147px;
+	border: 1px solid black;
+	font-size: 80px;
+	background-color: rgba(213,123,213,.7);
+	float: left;
+	text-align: center;
+	margin: auto;
+	position: relative;
+
+}
+.game_zone div{
+	margin: auto;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right:0;
+	left:0;
+	height: 80px;
+
+}
+.game_zone:nth-child(even){
+	background-color: rgba(113,223,213,.7);
+}
