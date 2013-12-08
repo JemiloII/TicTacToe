@@ -1,7 +1,8 @@
 $(function(){
   var click_counter = 0;
-  $('game_board').click(function(){
+  $('.game_board').click(function(){
     click_counter++;
+    alert(click_counter);
 
     function isEven(number){
         return (number%2 == 0) ? true : false;
