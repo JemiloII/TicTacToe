@@ -1,3 +1,5 @@
+
+
 $(function () {
 	var click_counter = 0;
 	var playerturn = true;
@@ -44,10 +46,11 @@ $(function () {
 
 	function ai_move(){
 		// AI logics
-		var values = [];
-		for(var i = 1; i <= 9; i++){
-				values[i] = $('#'+i).find('div').html();
-		}
+		
+		// var values = [];
+		// for(var i = 1; i <= 9; i++){
+		// 		values[i] = $('#'+i).find('div').html();
+		// }
 		//alert('AI Move + Click = ' + click_counter + ' Values = ' + values);
 		if(click_counter == 1){
 			// TURN 1
@@ -69,11 +72,14 @@ $(function () {
 
 
 	}
-	function edge_or_corner(value){
+	function edge_corner_or_center(value){
 		if((value % 2) == 0){
 			return 'edge';
+		}else if(value == 5){
+			return "center";
+		}else{
+			return "corner";
 		}
-
 	}
 
 	function find_furthest_corners(edge){
